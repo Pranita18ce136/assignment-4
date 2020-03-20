@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+}
+	input[type=text]:focus {
+  background-color: lightblue;
+}
+	input[type=button], input[type=submit], input[type=reset] {
+  background-color: rgb(130, 76, 175);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+body{
+      background-color: cornsilk;
+}
+
+</style>
+
+<body>
+<h1> Forms </h1>
+	<form>
+
+	<fieldset>
+  <legend>Registration form:</legend>
+  First Name:<input type="text" id=fname onblur="myfunc()"> Last Name: <input type="text" id=lname onblur="myfunc()"><br><br>
+  Email:<br> <input type="text"><br><br>
+  Password:<br> <input type="password"><br><br>
+  Date of birth:<br> <input type="text"><br><br>
+  Gender:<br>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br><br>
+  <input type="submit"> <input type="reset">
+ </fieldset>
+
+  </form>
+  <script>
+    function myfunc() {
+      var x = document.getElementById("fname");
+      var y = document.getElementById("lname");
+      x.value = x.value.toUpperCase();
+      y.value = y.value.toUpperCase();
+    }
+    </script>
+</body>
+
+</html>
